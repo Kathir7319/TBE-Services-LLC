@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Clock, MapPin, Trees, Mail, ShieldCheck, ArrowRight, Heart } from 'lucide-react';
 import { COMPANY } from '../data/siteContent';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -45,14 +46,9 @@ export default function Footer() {
           
           {/* Brand Info (2 cols on lg) */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white shadow-md">
-                <Trees className="w-6 h-6" />
-              </div>
-              <span className="text-2xl font-black text-white tracking-tight">
-                TBE<span className="text-emerald-500 ml-1">SERVICES</span> <span className="text-xs font-semibold text-slate-400">LLC</span>
-              </span>
-            </div>
+            <Link to="/" aria-label="TBE Services LLC Home" className="inline-block group">
+              <Logo variant="white" size="md" />
+            </Link>
             
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
               <strong className="text-slate-200">Flawless Lawns. Pristine Properties. Year-Round Dependability.</strong>

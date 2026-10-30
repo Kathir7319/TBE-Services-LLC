@@ -11,9 +11,11 @@ import {
   ArrowRight,
   Heart,
   Sparkles,
-  Users
+  Users,
+  Download
 } from 'lucide-react';
 import { COMPANY } from '../data/siteContent';
+import Logo from '../components/Logo';
 
 export default function AboutPage() {
   return (
@@ -149,6 +151,56 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold text-slate-900">3. 24/7 Direct Accessibility</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Emergencies and questions don't clock out at 5 PM. Our phone line <strong className="text-slate-900 font-bold">(919) 500-9991</strong> is staffed 24 hours a day, 7 days a week.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* BRAND IDENTITY & LOGO CREST */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-br from-white via-emerald-50/40 to-slate-50 rounded-3xl border border-slate-200/90 shadow-md p-8 sm:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div className="lg:col-span-7 space-y-4">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5" />
+                Official Brand Identity
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900">
+                The TBE Crest & Shield
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                The TBE Services LLC emblem represents our year-round commitment to Morrisville properties: an impenetrable shield symbolizing dependable protection, three rising vibrant turf blades signifying flourishing lawns, and a precision gold horizon line capturing laser-sharp curb edging.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href="/logo.svg"
+                  download="TBE-Services-LLC-Logo.svg"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-emerald-700 text-white font-bold text-xs transition-colors shadow-sm"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Download Vector Logo (SVG)</span>
+                </a>
+                <a
+                  href="/tbe-logo-badge.jpg"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 hover:bg-white text-slate-800 font-bold text-xs transition-colors"
+                >
+                  <span>View High-Res Badge (JPG)</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 flex flex-col items-center justify-center p-6 bg-white rounded-2xl border border-slate-200/80 shadow-sm text-center">
+              <div className="p-4 bg-slate-50 rounded-2xl w-full flex items-center justify-center">
+                <Logo size="lg" />
+              </div>
+              <p className="text-[11px] text-slate-400 font-medium mt-3">
+                Official Vector Mark • Morrisville, NC
               </p>
             </div>
 

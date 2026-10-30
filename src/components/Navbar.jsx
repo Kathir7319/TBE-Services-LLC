@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Phone, Menu, X, ShieldCheck, ArrowRight, Trees, Clock } from 'lucide-react';
 import { COMPANY } from '../data/siteContent';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -20,23 +21,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group focus:outline-none">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-600 via-emerald-700 to-green-900 flex items-center justify-center shadow-md shadow-emerald-700/20 group-hover:scale-105 transition-transform">
-              <Trees className="w-7 h-7 text-white" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-black tracking-tight text-slate-900 font-sans group-hover:text-emerald-700 transition-colors">
-                  TBE<span className="text-emerald-600 font-bold ml-1">SERVICES</span>
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">
-                  LLC
-                </span>
-              </div>
-              <p className="text-xs font-semibold tracking-wide text-slate-500 uppercase">
-                Property Care • Morrisville, NC
-              </p>
-            </div>
+          <Link to="/" className="group focus:outline-none" aria-label="TBE Services LLC Home">
+            <Logo size="md" />
           </Link>
 
           {/* Desktop Navigation */}
