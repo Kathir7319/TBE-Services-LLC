@@ -21,7 +21,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo */}
-          <Link to="/" className="group focus:outline-none" aria-label="TBE Services LLC Home">
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            }}
+            className="group focus:outline-none cursor-pointer"
+            aria-label="TBE Services LLC Home"
+          >
             <Logo size="md" />
           </Link>
 

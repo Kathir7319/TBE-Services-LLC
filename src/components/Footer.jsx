@@ -46,7 +46,12 @@ export default function Footer() {
           
           {/* Brand Info (2 cols on lg) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" aria-label="TBE Services LLC Home" className="inline-block group">
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}
+              aria-label="TBE Services LLC Home"
+              className="inline-block group cursor-pointer"
+            >
               <Logo variant="white" size="md" />
             </Link>
             
@@ -79,7 +84,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/" className="text-slate-400 hover:text-emerald-400 transition-colors">
+                <Link
+                  to="/"
+                  onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}
+                  className="text-slate-400 hover:text-emerald-400 transition-colors"
+                >
                   Home Page
                 </Link>
               </li>

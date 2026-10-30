@@ -11,9 +11,18 @@ import AboutPage from './pages/AboutPage';
 import EstimatesPage from './pages/EstimatesPage';
 import GalleryPage from './pages/GalleryPage';
 
-// Auto scroll to top on route change, or to hash if present
+// Prevent browser scroll restoration and auto scroll to top on route change
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    // Disable browser default scroll restoration so it never jumps down on reload
+    if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    // Always start at top on initial mount
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     if (hash) {
@@ -23,7 +32,8 @@ function ScrollToTop() {
         return;
       }
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Instant scroll to top on page change
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [pathname, hash]);
 
   return null;
