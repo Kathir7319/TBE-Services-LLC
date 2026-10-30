@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { COMPANY, SERVICES, TESTIMONIALS } from '../data/siteContent';
 import EstimateCalculator from '../components/EstimateCalculator';
+import SafeImage from '../components/SafeImage';
 
 export default function HomePage() {
   return (
@@ -90,8 +91,8 @@ export default function HomePage() {
             {/* Hero Image Showcase (5 cols) */}
             <div className="lg:col-span-5">
               <div className="relative rounded-3xl overflow-hidden border-2 border-emerald-500/20 shadow-2xl group">
-                <img
-                  src="https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=1200&q=80"
+                <SafeImage
+                  src="/images/hero-lawn.jpg"
                   alt="TBE Services LLC Flawless Lawn Maintenance in Morrisville NC"
                   className="w-full h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
@@ -144,7 +145,7 @@ export default function HomePage() {
           <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between group">
             <div>
               <div className="relative h-64 overflow-hidden">
-                <img
+                <SafeImage
                   src={SERVICES[0].image}
                   alt="Commercial Property Maintenance Morrisville NC"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -209,7 +210,7 @@ export default function HomePage() {
           <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between group">
             <div>
               <div className="relative h-64 overflow-hidden">
-                <img
+                <SafeImage
                   src={SERVICES[1].image}
                   alt="Residential Lawn Care Morrisville NC"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

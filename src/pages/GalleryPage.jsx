@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, Phone, ArrowRight, CheckCircle2, Building2, HomeIcon, Eye } from 'lucide-react';
 import { COMPANY } from '../data/siteContent';
+import SafeImage from '../components/SafeImage';
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState('all');
@@ -12,7 +13,7 @@ export default function GalleryPage() {
       title: "Corporate Campus Manicured Grounds",
       category: "commercial",
       location: "Morrisville Tech Park",
-      image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/corporate-campus.jpg",
       description: "Weekly groundskeeping, continuous turf edging, and pristine walkway clearance for multi-building corporate offices."
     },
     {
@@ -20,7 +21,7 @@ export default function GalleryPage() {
       title: "Precision Residential Striping & Edging",
       category: "residential",
       location: "Preston Park, Morrisville",
-      image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/lawn-striping.jpg",
       description: "Bermuda turf precision cut at 2.5 inches with crisp hard-surface blade edging along the sidewalk and driveway."
     },
     {
@@ -28,7 +29,7 @@ export default function GalleryPage() {
       title: "Seasonal Mulch Styling & Shrub Sculpting",
       category: "residential",
       location: "Morrisville Residential Estate",
-      image: "https://images.unsplash.com/photo-1558904541-efa8c4a08931?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/mulch-styling.jpg",
       description: "Triple-shredded dark hardwood mulch installed with distinct trench bordering and ornamental boxwood shaping."
     },
     {
@@ -36,7 +37,7 @@ export default function GalleryPage() {
       title: "Retail Hub Exterior Maintenance",
       category: "commercial",
       location: "Triangle Retail Center",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/commercial-maintenance.jpg",
       description: "Perimeter lawn care, weed mitigation, and high-visibility entrance upkeep for busy retail shopping districts."
     },
     {
@@ -44,7 +45,7 @@ export default function GalleryPage() {
       title: "Managed Community HOA Common Areas",
       category: "commercial",
       location: "Cary / Morrisville Border",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/estate-lawn.jpg",
       description: "Complete neighborhood entranceway maintenance, clubhouse lawn care, and continuous seasonal turf nutrition."
     },
     {
@@ -52,7 +53,7 @@ export default function GalleryPage() {
       title: "Custom Shrub Trimming & Hedge Geometry",
       category: "residential",
       location: "Morrisville Subdivisions",
-      image: "https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=1200&q=80",
+      image: "/images/shrub-trimming.jpg",
       description: "Artisan pruning protecting plant health while elevating the home's architectural lines."
     }
   ];
@@ -122,7 +123,7 @@ export default function GalleryPage() {
             >
               <div>
                 <div className="relative h-64 overflow-hidden">
-                  <img
+                  <SafeImage
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

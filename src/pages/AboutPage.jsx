@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { COMPANY } from '../data/siteContent';
 import Logo from '../components/Logo';
+import SafeImage from '../components/SafeImage';
 
 export default function AboutPage() {
   return (
@@ -84,8 +85,8 @@ export default function AboutPage() {
           <div className="lg:col-span-6">
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                <img
-                  src="https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?auto=format&fit=crop&w=1200&q=80"
+                <SafeImage
+                  src="/images/estate-lawn.jpg"
                   alt="TBE Services LLC Professional Lawn and Property Care"
                   className="w-full h-[460px] object-cover"
                 />

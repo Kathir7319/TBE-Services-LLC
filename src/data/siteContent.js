@@ -31,7 +31,7 @@ export const SERVICES = [
     shortDesc: "Comprehensive exterior property care tailored for commercial campuses, retail centers, business parks, and HOA communities demanding immaculate presentation.",
     icon: "Building2",
     badge: "Enterprise & Small Business",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/commercial-maintenance.jpg",
     features: [
       "Scalable contracts designed around your operating budget",
       "Corporate office campuses & technology park grounds care",
@@ -50,7 +50,7 @@ export const SERVICES = [
     shortDesc: "Dedicated home turf maintenance designed to keep your yard healthy, vibrant, and neighborhood-defining throughout all four seasons in Morrisville.",
     icon: "HomeIcon",
     badge: "Homeowners & Estates",
-    image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/residential-lawn.jpg",
     features: [
       "Precision scheduled mowing at optimal seasonal turf heights",
       "Laser-crisp sidewalk, driveway, and flowerbed edging",

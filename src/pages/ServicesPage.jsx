@@ -16,6 +16,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 import { COMPANY, SERVICES } from '../data/siteContent';
+import SafeImage from '../components/SafeImage';
 
 export default function ServicesPage() {
   const location = useLocation();
@@ -103,7 +104,7 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
               
               <div className="lg:col-span-5 relative min-h-[320px] lg:min-h-full">
-                <img
+                <SafeImage
                   src={commercialService.image}
                   alt="Commercial Property Maintenance Morrisville NC"
                   className="w-full h-full object-cover"
@@ -186,7 +187,7 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
               
               <div className="lg:col-span-5 relative min-h-[320px] lg:min-h-full lg:order-last">
-                <img
+                <SafeImage
                   src={residentialService.image}
                   alt="Residential Lawn Care Morrisville NC"
                   className="w-full h-full object-cover"
